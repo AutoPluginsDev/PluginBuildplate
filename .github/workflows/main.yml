@@ -23,7 +23,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Agalia-${{ vars.TARGET_VERSION }}
+          name: PluginBuildPlate-${{ vars.TARGET_VERSION }}
           path: target/*.jar
 
   release:
@@ -40,7 +40,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: Agalia-${{ vars.TARGET_VERSION }}
+          name: PluginBuildPlate-${{ vars.TARGET_VERSION }}
           path: ./target
           
       - name: List target directory
@@ -53,7 +53,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ vars.TARGET_VERSION }}
-          release_name: BUILDPLATE ${{ vars.TARGET_VERSION }}
+          release_name: PluginBuildPlate ${{ vars.TARGET_VERSION }}
           draft: true
           prerelease: false
 
@@ -63,6 +63,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./target/Agalia-${{ vars.TARGET_VERSION }}.jar
-          asset_name: Agalia-${{ vars.TARGET_VERSION }}.jar
+          asset_path: ./target/PluginBuildPlate-${{ vars.TARGET_VERSION }}.jar
+          asset_name: PluginBuildPlate-${{ vars.TARGET_VERSION }}.jar
           asset_content_type: application/java-archive
