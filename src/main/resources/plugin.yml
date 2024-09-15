@@ -1,0 +1,50 @@
+name: PluginBuildPlate
+version: 1.0.0
+main: fr.lumi.Main
+api-version: 1.15
+authors:
+  - Lumi_
+  - Adi_
+prefix: Agalia 1.0.0
+depends: [PlaceholderAPI]
+permissions:
+  agalia.*:
+    description: give access to all the plugin
+    children:
+      plugin.reload: true
+      plugin.admin: true
+  agalia.reload:
+    description: allow to reload the plugin
+  agalia.admin:
+    description: allow to create and manage the commands
+
+commands:
+  areload :
+    description:
+      reload the Time table of the command execution
+      (must be done after every command added)
+    usage : /acmdreload
+    permission: acmd.reload
+    permission-message: Sorry, you dont are not allowed to do this
+
+  ahelp:
+    description:
+      main command of the plugin
+    usage:
+      Bad usage of this command, please verify your command ID or your syntax.
+
+  agalia:
+    usage:
+      Bad usage of this command, please verify your command ID or your syntax.
+    description:
+      main command of the plugin
+    permission: acmd.admin
+    permission-message: Sorry, you dont are not allowed to do this
+
+  aTime:
+    usage:
+      Bad usage of this command, please verify your command ID or your syntax.
+    description:
+      Gives you the real server time
+    permission: acmd.admin
+    permission-message: Sorry, you dont are not allowed to do this
