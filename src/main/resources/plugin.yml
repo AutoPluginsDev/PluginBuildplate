@@ -5,7 +5,7 @@ api-version: 1.15
 authors:
   - Lumi_
   - Adi_
-prefix: Agalia 1.0.0
+prefix: BuildPlate 1.0.0
 depends: [PlaceholderAPI]
 permissions:
   agalia.*:
@@ -19,21 +19,21 @@ permissions:
     description: allow to create and manage the commands
 
 commands:
-  areload :
+  bpreload :
     description:
       reload the Time table of the command execution
       (must be done after every command added)
-    usage : /acmdreload
+    usage : /bpreload
     permission: acmd.reload
     permission-message: Sorry, you dont are not allowed to do this
 
-  ahelp:
+  bphelp:
     description:
       main command of the plugin
     usage:
       Bad usage of this command, please verify your command ID or your syntax.
 
-  agalia:
+  bprun:
     usage:
       Bad usage of this command, please verify your command ID or your syntax.
     description:
@@ -41,7 +41,7 @@ commands:
     permission: acmd.admin
     permission-message: Sorry, you dont are not allowed to do this
 
-  aTime:
+  bpTime:
     usage:
       Bad usage of this command, please verify your command ID or your syntax.
     description:

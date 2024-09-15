@@ -13,8 +13,8 @@ public class ConfigFileVerification extends cfgFileVerification {
         super(plg, plg.getConfig(), "| ERROR IN CONFIG.YML |", "config.yml");
 
         keys.put("ConfigVersion", 2);
-        keys.put("ConsolePrefix", "&eAgalia |");
-        keys.put("Prefix", "&eacmd | ");
+        keys.put("ConsolePrefix", "&ebp |");
+        keys.put("Prefix", "&ebp | ");
 
         super.setKeys(keys);
     }

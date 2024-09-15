@@ -185,11 +185,10 @@ public final class Main extends JavaPlugin {
         init();
 
         saveDefaultConfig();
-        //getRessourceFile(getLangFile(), "lang.yml", this);
         boolean verified = Load();
 
         // Registering the event
-        Bukkit.getPluginManager().registerEvents(new JoinServer(), this);
+        Bukkit.getPluginManager().registerEvents(new JoinServer(this), this);
 
         // End of the loading
         long exeTime = System.currentTimeMillis() - start;
@@ -222,10 +221,10 @@ public final class Main extends JavaPlugin {
 
         reloadConfig();
         config = getConfig();
-        Objects.requireNonNull(this.getCommand("ahelp")).setExecutor(new CommandRunnerHelp(this));
-        Objects.requireNonNull(this.getCommand("agalia")).setExecutor(new CommandRunnerCommand(this));
-        Objects.requireNonNull(this.getCommand("areload")).setExecutor(new CommandRunnerReload(this));
-        Objects.requireNonNull(this.getCommand("aTime")).setExecutor(new CommandRunnerTime(this));
+        Objects.requireNonNull(this.getCommand("bphelp")).setExecutor(new CommandRunnerHelp(this));
+        Objects.requireNonNull(this.getCommand("bprun")).setExecutor(new CommandRunnerExecute(this));
+        Objects.requireNonNull(this.getCommand("bpreload")).setExecutor(new CommandRunnerReload(this));
+        Objects.requireNonNull(this.getCommand("bpTime")).setExecutor(new CommandRunnerTime(this));
 
         return verified;
     }

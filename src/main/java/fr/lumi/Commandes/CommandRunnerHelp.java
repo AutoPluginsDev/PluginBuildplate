@@ -25,7 +25,7 @@ public class CommandRunnerHelp implements CommandExecutor, TabCompleter {
     @Override
     public List<String> onTabComplete(CommandSender sender, Command cmd, String alias, String[] args) {
         List<String> l = new ArrayList<>();
-        if (cmd.getName().equalsIgnoreCase("ahelp")) {
+        if (cmd.getName().equalsIgnoreCase("bphelp")) {
             if (sender instanceof Player) {
                 List<String> list = new ArrayList<>();
 

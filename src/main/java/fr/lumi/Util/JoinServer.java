@@ -9,6 +9,11 @@ import org.bukkit.entity.Player;
 
 public class JoinServer implements Listener {
     Main plugin;
+
+    public JoinServer(Main plg) {
+        plugin = plg;
+    }
+
     @EventHandler
     public void onPlayerJoinEvent(PlayerJoinEvent event){
         Player player = event.getPlayer();

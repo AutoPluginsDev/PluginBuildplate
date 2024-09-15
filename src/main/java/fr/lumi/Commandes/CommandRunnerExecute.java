@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class CommandRunnerCommand implements CommandExecutor, TabCompleter {
+public class CommandRunnerExecute implements CommandExecutor, TabCompleter {
 
     private Main plugin;
 
-    public CommandRunnerCommand(Main plg) {
+    public CommandRunnerExecute(Main plg) {
         plugin = plg;
 
     }

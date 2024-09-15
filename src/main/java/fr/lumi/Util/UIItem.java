@@ -11,7 +11,7 @@ import java.util.List;
 
 public class UIItem {
     public static class ItemBuilder {
-        private String name = "ACMD";
+        private String name = "BP";
         private final Material material;
         private final List<String> lore = new ArrayList<>();
         private int count = 1;
